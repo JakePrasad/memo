@@ -45,12 +45,12 @@ while len(s) > 0:
 	elif (isBase(curr)):
 		memo[curr] = fBase(curr)
 	else:
-		mapped = set([f(curr) for f in children])
-
-		if len(mapped-set(memo.keys())) > 0:
+		mapped = ([f(curr) for f in children])
+		mappedSet = set(mapped)
+		if len(mappedSet-set(memo.keys())) > 0:
 			# Instead of calling functions by adding to the actual stack,
 			# we add to the our virtual stack s
-			s += [curr] + list(mapped)
+			s += [curr] + mapped
 			continue
 		memo[curr] = acc(memo, mapped)
 print(memo[init])
