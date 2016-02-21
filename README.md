@@ -6,11 +6,18 @@ Two versions of the code - one in Python and one in OCaml
 
 ### Usage
 
+#### Fib
+
 python memo_compiler.py fib.py memo.py
 
 python memo.py --n 7
 
-### fib.py
+#### Stamps
+
+python memo_compiler.py stamps.py memo.py
+python memo.py --amt 13 --stamps 1,12
+
+### fib.py/stamps.py
 
 #### Format
 
