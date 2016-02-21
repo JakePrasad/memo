@@ -12,9 +12,10 @@ python memo_compiler.py fib.py memo.py
 
 python memo.py --n 7
 
-#### Stamps
+#### Min Stamps
 
 python memo_compiler.py stamps.py memo.py
+
 python memo.py --amt 13 --stamps 1,12
 
 ### fib.py/stamps.py
