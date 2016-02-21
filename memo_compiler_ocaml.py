@@ -91,6 +91,7 @@ while (not (Stack.is_empty s)) do
 	
 done;;
 Printf.printf "''' + output + '''" (Hashtbl.find memo init);;
+print_newline();;
 '''
 
 text_file = open(sys.argv[2], "w")

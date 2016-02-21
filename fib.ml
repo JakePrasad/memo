@@ -1,4 +1,4 @@
-let init = 500000;;
+let init = (int_of_string(Sys.argv.(1)));;
 ___
 let isBase curr =
 	curr == 0 || curr == 1

@@ -1,4 +1,5 @@
-let init = 7;;
+
+let init = (int_of_string(Sys.argv.(1)));;
 
 let rec sum l =
 	match l with
@@ -57,8 +58,10 @@ let isBase curr =
 
 let children = [(fun n -> n - 1); (fun n -> n - 2)];;
 let memo = Hashtbl.create 44;;
-let s = Stack.create();;
-Stack.push init s;; (*This is our virtual stack*)
+
+let s = Stack.create();; (*This is our virtual stack*)
+Stack.push init s;; 
+
 while (not (Stack.is_empty s)) do
 	let curr = Stack.pop s in
 	if ((Hashtbl.mem memo curr) == false) then (
@@ -82,3 +85,4 @@ while (not (Stack.is_empty s)) do
 	
 done;;
 Printf.printf "%d" (Hashtbl.find memo init);;
+print_newline();;
